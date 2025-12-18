@@ -1,7 +1,7 @@
-from langchain_ollama import OllamaChat
+from langchain_ollama import ChatOllama
 from prompt import generation_prompt, reflection_prompt
 
-llm = OllamaChat(model="llama3.1:8b")
+llm = ChatOllama(model="llama3.1:8b")
 
 generation_chain = generation_prompt | llm
 reflection_chain = reflection_prompt | llm
